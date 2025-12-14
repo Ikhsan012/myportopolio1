@@ -53,7 +53,7 @@ const sendMessage = () => {
       
       <div class="mb-8 flex-none">
         <h2 class="text-3xl md:text-4xl font-bold font-mono">
-          <span class="text-cyan-400">03.</span> 
+          <span class="text-cyan-400">04.</span> 
           <span class="border-b-2 border-cyan-400 pb-1">./contact-me.sh</span>
         </h2>
         <p class="mt-4 text-gray-400 font-mono text-sm">
@@ -70,8 +70,7 @@ const sendMessage = () => {
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">New Collaboration.</span>
             </h3>
             <p class="text-gray-400">
-              Punya ide project gila? Server sekolah lu meledak? Atau cuma mau ngajak mabar?
-              Inbox gw selalu open port-nya (kecuali pas lagi compile kernel).
+              Memiliki ide proyek yang ambisius? Sedang menghadapi kendala infrastruktur server? Atau sekadar ingin berdiskusi seputar teknologi? Jalur komunikasi saya selalu terbuka untuk peluang kolaborasi baru
             </p>
           </div>
 

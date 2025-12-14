@@ -10,7 +10,6 @@ const profileImage = ref(null); // Tambahin ref buat animasi gambar (opsional)
 onMounted(() => {
   const tl = gsap.timeline();
 
-  // Animasi Gambar muncul (Pop up)
   tl.from(profileImage.value, {
     scale: 0,
     opacity: 0,
@@ -25,16 +24,15 @@ onMounted(() => {
     skewY: 7
   }, "-=0.5");
 
-  // TypeIt logic (Udah bener)
   new TypeIt(subTitle.value, {
     speed: 50,
     loop: true,
     waitUntilVisible: true,
     startDelay: 1500,
   })
-  .type("> Backend Developer")
+  .type("> Fullstack Vibe Coder Developer")
   .pause(1000)
-  .delete(17) // Sesuaikan jumlah huruf yang dihapus
+  .delete(30) // Sesuaikan jumlah huruf yang dihapus
   .type(" Linux User")
   .pause(1000)
   .delete(10)
@@ -48,12 +46,19 @@ onMounted(() => {
 <template>
   <section class="h-screen w-full relative flex flex-col justify-center items-center overflow-hidden">
     
-    <div ref="profileImage" class="z-10 mb-6 relative">
-       <img src="../assets/profil.jpg" alt="Profile" class="w-40 h-40 md:w-52 md:h-52 object-cover border-4 border-blue-500/50 rounded-full shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+<div ref="profileImage" class="z-10 mb-6 relative flex justify-center items-center">
+       
+       <div class="relative w-40 h-40 md:w-52 md:h-52 rounded-full p-[3px] md:p-[4px] bg-gradient-to-tr from-cyan-300 via-blue-500 to-blue-800 shadow-[0_0_60px_-15px_rgba(59,130,246,0.9)] group overflow-hidden">
+         
+         <div class="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-40 animate-shimmer"></div>
+
+         <img src="../assets/profil.jpg" alt="Profile" class="relative z-10 w-full h-full object-cover rounded-full border-[3px] border-gray-950 bg-gray-950">
+       </div>
+
     </div>
 
     <div class="z-10 text-center px-4">
-      <h1 ref="mainTitle" class="text-5xl md:text-7xl font-bold tracking-tighter mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+      <h1 ref="mainTitle" class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
         Ikhsan Null.
       </h1>
       
@@ -62,7 +67,7 @@ onMounted(() => {
       </div>
 
       <button onclick="window.location.href='#about'" class="mt-8 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30">
-        AYO MULAI
+        Lets Start!
       </button>
             <button class="mt-4 ml-3 px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/30">
         Download CV

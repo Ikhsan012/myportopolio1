@@ -23,6 +23,7 @@ const tools = [
 //   { name: '', color: 'text-red-200', border: 'border-red-400' },
   { name: 'Postman', color: 'text-orange-500', border: 'border-orange-500' },
   { name: 'Docker', color: 'text-blue-500', border: 'border-blue-500' },
+  { name: 'Terminal Linux', color: 'text-black-500', border: 'border-black-500' },
 ];
 </script>
 
@@ -38,106 +39,67 @@ const tools = [
       </p>
     </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        
-        <div class="relative group order-2 lg:order-1"> <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
-          
-          <div class="relative bg-gray-950 rounded-lg border border-gray-800 shadow-2xl overflow-hidden text-left">
-            <div class="bg-gray-800 px-4 py-2 flex items-center space-x-2 border-b border-gray-700">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-              <div class="ml-4 text-xs text-gray-400 font-mono">ikhsan@archlinux:~</div>
-            </div>
+    <div class="flex flex-col items-center justify-center min-h-[50vh] px-4">
 
-            <div class="p-4 md:p-6 font-mono text-xs md:text-sm space-y-4">
-              <p>
-                <span class="text-green-400">➜</span> 
-                <span class="text-blue-400">~</span> 
-                <span class="text-gray-300">neofetch --ascii_distro arch</span>
-              </p>
-              
-              <div class="flex flex-row gap-4">
-                 <div class="hidden sm:block text-cyan-500 font-bold whitespace-pre leading-none select-none text-[10px] md:text-xs">
-       /\
-      /  \
-     /    \
-    /      \
-   /   ,,   \
-  /   |  |   \
- /_-''    ''-_\
-                </div>
+  <div class="w-full max-w-4xl space-y-8 text-center">
+    
+    <div class="prose prose-invert mx-auto">
+      <h3 class="text-2xl md:text-4xl font-bold text-gray-100 mb-4">
+        Write Your
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Code.</span>
+      </h3>
+      <p class="text-gray-400 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">
+        Hello, I am Muh. Ikhsan Ainul (often known as Ikhsan Null). I am a 18-year-old technology enthusiast with a strong focus on
+        <span class="text-cyan-400 font-semibold">System Administration</span> And <span class="text-cyan-400 font-semibold">Web Development</span>. 
+      </p>
+    </div>
 
-                <div class="space-y-1">
-                  <p><span class="text-cyan-400 font-bold">Host</span>: Ikhsan Null</p>
-                  <p><span class="text-cyan-400 font-bold">OS</span>: Arch Linux</p>
-                  <p><span class="text-cyan-400 font-bold">Uptime</span>: 18 years</p>
-                  <p><span class="text-cyan-400 font-bold">Role</span>: Vibe Coder</p>
-                  <p><span class="text-cyan-400 font-bold">Status</span>: <span class="text-green-400 blink">Online</span></p>
-                  
-                  <div class="flex mt-2 gap-2">
-                    <div class="w-3 h-3 bg-black"></div>
-                    <div class="w-3 h-3 bg-red-500"></div>
-                    <div class="w-3 h-3 bg-green-500"></div>
-                    <div class="w-3 h-3 bg-blue-500"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      
+      <div class="flex flex-col items-center">
+        <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider border-b border-gray-700 pb-1">Frontend</h4>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span 
+            v-for="skill in skills" 
+            :key="skill.name"
+            :class="`px-2 py-1 rounded border ${skill.border} ${skill.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
+          >
+            {{ skill.name }}
+          </span>
         </div>
-
-        <div class="space-y-6 order-1 lg:order-2">
-          <div class="prose prose-invert">
-            <h3 class="text-2xl md:text-3xl font-bold text-gray-100">
-              Hello
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">World.</span>
-            </h3>
-            <p class="text-gray-400 text-sm md:text-base leading-relaxed">
-              Hi, My Name Is Muh Ikhsan Ainul I Like It
-              <span class="text-cyan-400">Coding</span> And <span class="text-cyan-400">Studying</span>. 
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider">Frontend</h4>
-            <div class="flex flex-wrap gap-2">
-              <span 
-                v-for="skill in skills" 
-                :key="skill.name"
-                :class="`px-2 py-1 rounded border ${skill.border} ${skill.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
-              >
-                {{ skill.name }}
-              </span>
-            </div>
-          </div>
-          <div>
-            <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider">Backend</h4>
-            <div class="flex flex-wrap gap-2">
-              <span 
-                v-for="backend in backend" 
-                :key="backend.name"
-                :class="`px-2 py-1 rounded border ${backend.border} ${backend.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
-              >
-                {{ backend.name }}
-              </span>
-            </div>
-          </div>
-            <div>
-            <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider">Tools</h4>
-            <div class="flex flex-wrap gap-2">
-              <span 
-                v-for="backend in tools" 
-                :key="backend.name"
-                :class="`px-2 py-1 rounded border ${backend.border} ${backend.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
-              >
-                {{ backend.name }}
-              </span>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <div class="flex flex-col items-center">
+        <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider border-b border-gray-700 pb-1">Backend</h4>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span 
+            v-for="back in backend" 
+            :key="back.name"
+            :class="`px-2 py-1 rounded border ${back.border} ${back.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
+          >
+            {{ back.name }}
+          </span>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <h4 class="text-xs font-mono text-gray-500 mb-3 uppercase tracking-wider border-b border-gray-700 pb-1">Tools</h4>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span 
+            v-for="tool in tools" 
+            :key="tool.name"
+            :class="`px-2 py-1 rounded border ${tool.border} ${tool.color} bg-gray-800/50 text-xs font-mono hover:bg-gray-800 transition-colors`"
+          >
+            {{ tool.name }}
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
   </section>
 </template>
 

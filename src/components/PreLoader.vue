@@ -6,7 +6,6 @@ const progress = ref(0);
 const currentLog = ref('');
 const logs = ref([]);
 
-// Daftar pesan boot ala Linux
 const bootMessages = [
   "Initializing kernel...",
   "Loading module: vue_core_v3.0...",

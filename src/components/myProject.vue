@@ -7,11 +7,11 @@ const projects = ref([
     id: 1,
     name: 'Bot Whatsapp',
     extension: '.js',
-    status: 'ongoing', // running, stopped, maintenance
+    status: 'running', // running, stopped, maintenance
     description: 'Bot Wa untuk mempermudah keseharian, tersedia banyak fitur',
     tech: ['Node.js', 'Whatsapp-web.js', 'npm'],
     link: '#',
-    github: '#'
+    github: 'https://github.com/Ikhsan012/bot-whatsappwebjs.git'
   },
   {
     id: 2,
@@ -20,16 +20,16 @@ const projects = ref([
     status: 'ongoing',
     description: 'SMBO (Sistem Management Barang Organisai) adalah Sistem Yang Saya Buat Untuk Mempermudah Manajement Barang Di Dalam lingkup Organisasi',
     tech: ['Vue.js', 'Tailwind', 'Firebase'],
-    link: '#',
-    github: '#'
+    link: 'https://smbo1.vercel.app/',
+    github: 'https://github.com/Ikhsan012/smbo1.git'
   },
   {
     id: 3,
-    name: 'arch-rice-config',
-    extension: '.conf',
-    status: 'stopped',
-    description: 'Kumpulan dotfiles konfigurasi i3wm, polybar, dan zsh setup pribadi.',
-    tech: ['Bash', 'Lua', 'CSS'],
+    name: 'Undangan Pernikahan',
+    extension: '.vue',
+    status: 'ongoing',
+    description: 'Undangan Pernikahan Digital Dengan Vue Dan Tailwind',
+    tech: ['Vue.js', 'Tailwind'],
     link: '#',
     github: '#'
   },
@@ -49,7 +49,7 @@ const getStatusColor = (status) => {
     
     <div class="max-w-7xl mx-auto w-full mb-8 flex-none">
       <h2 class="text-3xl md:text-4xl font-bold font-mono">
-        <span class="text-cyan-400">02.</span> 
+        <span class="text-cyan-400">03.</span> 
         <span class="border-b-2 border-cyan-400 pb-1">~/projects</span>
       </h2>
       <p class="mt-4 text-gray-400 font-mono text-sm">
